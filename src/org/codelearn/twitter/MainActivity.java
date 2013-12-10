@@ -2,6 +2,7 @@ package org.codelearn.twitter;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 
@@ -23,7 +24,8 @@ public class MainActivity extends Activity {
 		      public void onClick(View v) {
 		        //This is a comment which does no good to your code. Feel free to remove it after you copy pasted this snippet.
 		        //Assignment - write logic to update the 'Login' text inside the button to 'Clicked'
-		    	  _loginBtn.setText("Clicked");
+		    	  Intent intent = new Intent(MainActivity.this, TweetListActivity.class);
+		          startActivity(intent);
 		      }
 		  });
 		
