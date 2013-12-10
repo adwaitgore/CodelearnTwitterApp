@@ -36,9 +36,11 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int activity_tweet_list=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f070000;
+        public static final int tweet_list=0x7f070001;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -49,6 +51,8 @@ public final class R {
         public static final int lbl_login=0x7f050007;
         public static final int lbl_pwd=0x7f050005;
         public static final int lbl_username=0x7f050003;
+        public static final int no_tweet_found=0x7f050009;
+        public static final int title_activity_tweet_list=0x7f050008;
     }
     public static final class style {
         /** 
