@@ -6,5 +6,7 @@
     <string name="hello_world">Hello Twitter</string>
 	<string name="lbl_username">Username</string>
  <string name="lbl_enter_username">Enter your username</string>
- 
+ <string name="lbl_pwd">Password</string>
+ <string name="lbl_enter_pwd">Enter your password</string>
+ <string name="lbl_login">Login</string>
 </resources>
