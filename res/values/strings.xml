@@ -3,6 +3,8 @@
 
     <string name="app_name">Codelearn Twitter App</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">This is sparta!</string>
-
+    <string name="hello_world">Hello Twitter</string>
+	<string name="lbl_username">Username</string>
+ <string name="lbl_enter_username">Enter your username</string>
+ 
 </resources>
