@@ -26,7 +26,10 @@
             android:name="org.codelearn.twitter.TweetListActivity"
             android:label="@string/title_activity_tweet_list" >
         </activity>
-        
+        <activity
+            android:name="org.codelearn.twitter.TweetDetailActivity"
+            android:label="@string/title_activity_tweet_detail" >
+        </activity>
     </application>
 
 </manifest>
