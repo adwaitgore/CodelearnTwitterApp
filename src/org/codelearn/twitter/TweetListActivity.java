@@ -2,17 +2,19 @@ package org.codelearn.twitter;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.ListActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
-public class TweetListActivity extends Activity {
+public class TweetListActivity extends ListActivity {
 
-	private ListView tweetListView;
+
 
     private ArrayAdapter tweetItemArrayAdapter;
 	
@@ -25,8 +27,7 @@ public class TweetListActivity extends Activity {
 		
 		
 		
-		tweetListView = (ListView) findViewById(R.id.tweetList);
-      tweetListView.setAdapter(tweetItemArrayAdapter);
+		setListAdapter(tweetItemArrayAdapter);
 	}
 	
 	
@@ -52,4 +53,9 @@ public class TweetListActivity extends Activity {
 		return true;
 	}
 
+	@Override
+	 protected void onListItemClick(ListView l, View v, int position, long id) {
+	     TextView t = (TextView) v.findViewById(R.id.tweetTitle);
+	     t.setText("Tweet Clicked");
+	 }
 }
