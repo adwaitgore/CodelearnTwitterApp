@@ -2,7 +2,10 @@ package org.codelearn.twitter;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -10,7 +13,7 @@ import android.widget.ListView;
 public class TweetListActivity extends Activity {
 
 	private ListView tweetListView;
-    private String[] stringArray ;
+
     private ArrayAdapter tweetItemArrayAdapter;
 	
 	@Override
@@ -18,14 +21,29 @@ public class TweetListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tweet_list);
 		
-		stringArray = new String[10];
-        for(int i=0; i < stringArray.length; i++){
-            stringArray[i] = "String " + i;
-        }
-      tweetItemArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stringArray);
-      tweetListView = (ListView) findViewById(R.id.tweetList);
+		tweetItemArrayAdapter = new TweetAdapter(this, new String[10]);
+		
+		
+		
+		tweetListView = (ListView) findViewById(R.id.tweetList);
       tweetListView.setAdapter(tweetItemArrayAdapter);
 	}
+	
+	
+	private class TweetAdapter extends ArrayAdapter{
+	       private LayoutInflater inflater;
+	                
+	        public TweetAdapter(Activity activity, String[] items){
+	            super(activity, R.layout.row_tweet, items);
+	            inflater = activity.getWindow().getLayoutInflater();
+	        }
+	        
+	        @Override
+	        public View getView(int position, View convertView, ViewGroup parent){
+	            return inflater.inflate(R.layout.row_tweet, parent, false);
+	        }
+
+	   }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

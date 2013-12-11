@@ -30,12 +30,12 @@ public final class R {
         public static final int fld_pwd=0x7f080006;
         public static final int fld_username=0x7f080003;
         public static final int header=0x7f080000;
-        public static final int imageView1=0x7f08000c;
+        public static final int imageView1=0x7f080009;
         public static final int pwd=0x7f080005;
         public static final int pwd_block=0x7f080004;
-        public static final int textView1=0x7f080009;
-        public static final int textView2=0x7f08000a;
-        public static final int textView3=0x7f08000b;
+        public static final int textView1=0x7f08000a;
+        public static final int textView2=0x7f08000b;
+        public static final int textView3=0x7f08000c;
         public static final int tweetList=0x7f080008;
         public static final int uname_block=0x7f080001;
         public static final int username=0x7f080002;
