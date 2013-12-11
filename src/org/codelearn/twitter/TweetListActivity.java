@@ -3,6 +3,7 @@ package org.codelearn.twitter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -55,7 +56,7 @@ public class TweetListActivity extends ListActivity {
 
 	@Override
 	 protected void onListItemClick(ListView l, View v, int position, long id) {
-	     TextView t = (TextView) v.findViewById(R.id.tweetTitle);
-	     t.setText("Tweet Clicked");
+		Intent intent = new Intent(this, TweetDetailActivity.class);
+	     startActivity(intent);
 	 }
 }
